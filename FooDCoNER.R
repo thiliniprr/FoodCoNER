@@ -155,9 +155,6 @@ preprocess_text <- function(text) {
   dietary_words <- tolower(dietaryDictionary)
   output[, inDict := as.integer(token %in% dietary_words | stem_words(tolower(token)) %in% dietary_words)]
   
-  # Additional dictionary lookups commented out for clarity
-  # ...
-  
   # Clean up nounphrase column
   output[, nounphrase := factor(nounphrase, levels = c("O", "B", "I", "beg", "mid", "end_root", "beg_root"))]
   output[nounphrase == "beg" & pos == "DET", nounphrase := "O"]
