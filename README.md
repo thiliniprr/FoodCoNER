@@ -1,4 +1,4 @@
-***Food Annotator with CRF***
+**Food Annotator with CRF**
 
 This project provides a Named Entity Recognition (NER) and Inside-Outside-Beginning (IOB) tagging solution for dietary information extraction from text. It uses Conditional Random Fields (CRF) models trained on annotated data to identify and classify food-related entities.
 
@@ -55,7 +55,10 @@ This project provides a Named Entity Recognition (NER) and Inside-Outside-Beginn
 
 **Output**
 
-* **`taglist`:** A dataframe with the identified food-related entities and their corresponding types.
+A data frame containing:
+
+* **PMID:**  The document ID.
+* **annotation:**  The identified food-related entities.
 
 **Important Notes**
 
